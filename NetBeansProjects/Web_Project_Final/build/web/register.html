@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>User Registration</h1>
+        <form action="Register" method="post"> 
+            <pre>
+<input type="text" name="name" placeholder="Enter Name" required>
+<input type="email" name="mail" placeholder="Enter Email" required>
+<input type="text" pattern="[6789][0-9]{9}" name="mob" placeholder="Enter Mobile" required>
+<input type="password" id="pwd1" name="pwd" placeholder="Enter Password" required>
+<input type="password" id="pwd2"  placeholder="Enter confirm Password" required><b id="one" style="color: red"></b>
+         <input type="submit" value="Register" onclick="return valid()">
+            </pre>
+        </form>
+        
+        <script>
+            function valid()
+            {
+           pwd=document.getElementById("pwd1").value;     
+           conf_pwd=document.getElementById("pwd2").value;  
+           //document.write(pwd+":"+conf_pwd);
+           if(pwd==conf_pwd)
+           {
+            return true;   
+            }
+            else
+            {
+                document.getElementById("one").innerHTML="Password and confirm password not match";
+                return false;
+            }
+        }
+            </script>
+    </body>
+</html>
